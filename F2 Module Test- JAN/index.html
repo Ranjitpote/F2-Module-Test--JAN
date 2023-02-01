@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F2 Module Test- JAN</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      background-color: black;
+      color: aliceblue;
+    }
+
+    #gallery {
+      display: flex;
+      justify-content: center;
+      border: 3px solid gray;
+      margin: 20px;
+      justify-content: space-around;
+    }
+
+    .img-container {
+      width: 18.5%;
+      margin: 15px;
+      border: 2px solid rgb(239, 233, 233);
+    }
+
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+
+    form {
+      display: none;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 180px;
+      border: 2px solid rgb(208, 202, 202);
+      background-color: black;
+
+
+    }
+
+    #nameDisplay {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #usernameDisplay {
+      display: none;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #dice {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid black;
+      text-align: center;
+      margin-top: 100px;
+      background-color: black;
+      color: rgb(0, 0, 0);
+    }
+
+    #prompt {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #coupon {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid rgb(132, 117, 117);
+      margin-top: 70px;
+      padding: 10px;
+    }
+
+    body {
+      flex-direction: column;
+
+    }
+
+    input {
+      height: 50px;
+      width: 500px;
+      border-radius: 30px;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    button {
+      width: 120px;
+      height: 50px;
+      border-radius: 30px;
+      font-size: 25px;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Gallery -->
+  <div id="gallery">
+    <div class="img-container">
+      <img src="/img/form-img.png" id="first-img" class="img">
+    </div>
+    <div class="img-container">
+      <img src="/img/data.jpg" id="second-img" class="img">
+    </div>
+    <div class="img-container">
+      <img src="/img/dice.avif" id="third-img" class="img">
+    </div>
+    <div class="img-container">
+      <img src="/img/numbers.jpg" id="fourth-img" class="img">
+    </div>
+  </div>
+  <div class="messages">
+    <center>
+
+      <!-- form -->
+
+      <form id="form" style="display:none;">
+        <input type="text" id="name" placeholder="Name" required>
+        <br><br>
+        <input type="email" id="email" placeholder="Email" required>
+        <br><br>
+        <input type="text" id="username" placeholder="Username" required>
+        <br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </center>
+
+    <!-- dice img -->
+    <div id="dice" style="display:none;">
+      <img src="/img/d img.jpg" width="200px" height="200px">
+      <p id="score" style="border: 2px solid rgb(86, 84, 84);font-size: 25px;">0</p>
+    </div>
+    <!-- display message -->
+    <p id="prompt" style="display:none; font-size: 25px;">Bad luck....! Try next time.</p>
+
+    <!-- coupon & coupon number -->
+    <div id="coupon" style="display:none;">
+      <p id="coupon-text" style="text-align: center; "></p>
+      <img src="/img/congrats.jpg">
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+
+
+</body>
+
+</html>
